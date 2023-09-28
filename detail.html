@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본 영역 설정 */
+        * {
+            font-family: NanumSquareRound;
+
+        }
+
+        body {
+            background: #FBF9F3;
+            width: 1000px;
+            /*1000, 1200 중 선택*/
+            margin: 0 auto;
+        }
+
+        /* 기본 영역 설정 끝 */
+
+        /* 제목 영역 설절*/
+        .content_title {
+            background-color: bisque;
+            width: 1000px;
+            height: 70px;
+            display: table-cell;
+            vertical-align: middle;
+            border-top: 2px solid #EEC595;
+            border-right: 2px solid #EEC595;
+            border-left: 2px solid #EEC595;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        table {
+            display: flex;
+            text-align: right;
+            float: right;
+        }
+
+        /* 내용 영역 설정*/
+        .picture {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .content_detail {
+            border: 2px solid #EEC595;
+        }
+
+        .picture_text {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 수정/삭제 버튼 관련 스타일 적용 */
+        button {
+            position: relative;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 10px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 10px 320px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.25s;
+            float: right;
+        }
+
+        .mod_del {
+            background-color: #EEC595;
+            margin-right: 5px;
+        }
+
+        /* 댓글 관련 스타일 적용 */
+        .all_reply{
+            width: 1000px;
+            height: 500px;
+            border: 2px solid #EEC595;
+
+        }
+
+        .reply_register{ 
+            width: 800px;
+            height: 100px;
+            border:2px solid #EEC595;
+            margin : 40px 0px 0px 100px;
+            
+        }
+        .reply{
+            position : relative;
+        }
+
+        .reply_bnt{
+            position: absolute;
+            right: 10px;
+            top: 80px;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 10px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 10px 320px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.25s;
+            background-color: #EEC595;
+            margin-right: 5px;
+        }
+
+        .reply_content{
+            position: relative;
+        }
+
+        .reply_one{
+            padding:10px;
+            border: 2px solid  #EEC595;
+            border-radius: 20px;
+
+            background-color: white;
+            width: 785px;
+            height: 20px;
+            margin : 20px 0px 0px 100px;
+        }
+
+        .reply_del{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 10px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 10px 320px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.25s;
+            background-color: #EEC595;
+            margin-right: 5px;
+        }
+
+        /* 임시 (나중에 삭제) */
+        .header,
+        .footer {
+            background: black;
+            color: white;
+            text-align: center;
+            height: 100px;
+            clear: left;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 나중에 import 할 부분 -->
+    <div class="header" style="margin-bottom: 50px;">
+        헤더 영역 (jsp: include page="")
+    </div>
+
+    <div class="all_content">
+        <!-- 제목, 조회수, 추천수 -->
+        <div class="content_title">
+
+            <div class="title">오감자치즈후라이</div>
+            <table class="recommand_date">
+                <tr>
+                    <td>
+                        추천수 : 1,234</td>
+                </tr>
+                <tr>
+                    <td>2023.09.17 20:03 닉네임</td>
+                </tr>
+            </table>
+            <!--<div class="recommand_count">추천수 : 1,234 <br>2023.09.17 20:03 닉네임</div>-->
+        </div>
+    </div>
+
+    <!-- 내용 -->
+    <div class="content_detail">
+        <div class="picture"><img src="/mirro.jpeg" alt="" style="width:350px"></div>
+        <br>
+        <div class="content">
+            <div style="text-align : center;"> 재료 : 오감자, 체다치즈, 스트링치즈</div> <br><br>
+            <div class="picture_text"><img src="/mirro.jpeg" alt="" style="padding-left: 20%;">1. 오감자를 접시에 얹어준다. </div>
+            <br>
+            <div class="picture_text"><img src="/mirro.jpeg" alt="" style="padding-left: 20%;">2. 체다치즈와 스트링치즈를 찢어서 얹는다
+            </div><br>
+            <div class="picture_text"><img src="/mirro.jpeg" alt="" style="padding-left: 20%;">3. 전자레인지에 1분 정도 돌리면 완성
+            </div><br>
+
+            <br>
+            <div style="text-align : center;">
+                이것만큼 맛있는 안주는 없었다. 이것은 그라탕인가 오감자인가<br>
+                오감자치즈후라이로 불금 어떠신가요??</div>
+        </div>
+        <br><br>
+        <!-- 추천/찜하기 버튼-->
+        <br><br><br><br><br><br><br><br>
+    </div>
+
+    <!-- 수정, 삭제 버튼 -->
+    <!-- 각 페이지로 이동하는 링크 추가 필요 -->
+    <br>
+    <button class="mod_del" type="submit"> 수정</button>
+    <button class="mod_del" type="submit"> 삭제 </button>
+    <br><br><br>
+    
+
+    <div class="all_reply">
+        <div class="reply" >
+            <textarea class="reply_register"> 댓글을 입력하세요.</textarea>
+            <button class="reply_bnt" type="submit"> 등록 </button>
+        </div>
+        <div class="reply_content">
+            <div class="reply_one">
+                <div style="display: inline-block;"> 닉네임 </div>
+                <div style="display: inline-block;"> 너무 맛있어 보여요~~</div>
+            </div>
+            <button class="reply_del" type="submit"> 삭제 </button>
+        </div>
+        <div class="reply_content">
+            <div class="reply_one">
+                <div style="display: inline-block;"> 닉네임 </div>
+                <div style="display: inline-block;"> 너무 맛있어 보여요~~</div>
+            </div>
+            <button class="reply_del" type="submit"> 삭제 </button>
+        </div>
+        <div class="reply_content">
+            <div class="reply_one">
+                <div style="display: inline-block;"> 닉네임 </div>
+                <div style="display: inline-block;"> 너무 맛있어 보여요~~</div>
+            </div>
+            <button class="reply_del" type="submit"> 삭제 </button>
+        </div>
+        <div class="reply_content">
+            <div class="reply_one">
+                <div style="display: inline-block;"> 닉네임 </div>
+                <div style="display: inline-block;"> 너무 맛있어 보여요~~</div>
+            </div>
+            <button class="reply_del" type="submit"> 삭제 </button>
+        </div>
+        <div class="reply_content">
+            <div class="reply_one">
+                <div style="display: inline-block;"> 닉네임 </div>
+                <div style="display: inline-block;"> 너무 맛있어 보여요~~</div>
+            </div>
+            <button class="reply_del" type="submit"> 삭제 </button>
+        </div>
+    </div>
+
+
+    <div class="footer" style="margin-top: 50px;">footer include</div>
+
+</body>
+
+</html>
