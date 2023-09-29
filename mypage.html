@@ -90,26 +90,12 @@
             cursor: pointer; /*더보기 onclick 설정하기*/
             margin: 30px 10px 10px 10px;
         }
-        /* 타이틀 영역 끝 */
-
-
-
-
-
-         .header,.footer {
-            background: black; 
-            color: white; 
-            text-align: center;
-            height: 100px;
-            clear: left;
-        }
+      
     </style>
 </head>
 <body>
     <!-- header  -->
-    <div class="header" style="margin-bottom: 100px;">
-        헤더 영역 (jsp: include page="")
-    </div>
+    <jsp:include page="header.jsp" />
 
     <div class="title-box">
         <div class="title">떠뽀끼 킬러 셰프님 마이페이지</div>
@@ -183,12 +169,6 @@
         <div class="recipe-name">{레시피명}</div>
     </div>
 
-
-
-
-
-
-
-    <div class="footer" style="margin-top: 400px;">footer include</div>
+    <jsp:include page="footer.jsp" />
 </body>
 </html>

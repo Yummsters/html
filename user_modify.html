@@ -194,21 +194,13 @@
          
 
 
-          /* 임시 (나중에 삭제) */
-          .header, .footer {
-            background: black; 
-            color: white; 
-            text-align: center;
-            height: 100px;
-            clear: left;
-        }
+        
 
     </style>
 </head>
 <body>
      <!-- header  -->
-     <div class="header" style="margin-bottom: 100px;">
-        헤더 영역 (jsp: include page="")
+     <jsp:include page="header.jsp" />
     </div>
      <!-- 박스-->
     <div class="box" style="border:3px solid#EEC595"> 
@@ -248,6 +240,6 @@
     </div>
 
 
-    <div class="footer" style="margin-top: 400px;">footer include</div>
+    <jsp:include page="footer.jsp" />
 </body>
 </html>
