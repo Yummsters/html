@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레시피 수정 페이지</title>
+    <title>레시피 등록 페이지</title>
     <style>
         /* 기본 영역 설정 */
         * {
             font-family: NanumSquareRound;
-            margin:0 auto;
         }
 
         body {
@@ -124,23 +123,23 @@
         }
 
     </style>
-    <!-- jQuery CDN 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
-    <!-- jQuery UI CDN 
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery UI CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>-->
-    <!-- jQuery UI CSS CDN 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>-->
-    <!-- codemirror CDN URL 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>-->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- jQuery UI CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+    <!-- codemirror CDN URL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>
 
     <!-- TOAST UI Editor CDN URL(CSS) -->
     <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
 
-    <!-- TOAST UI Editor CDN URL(JS) 
-    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>-->
+    <!-- TOAST UI Editor CDN URL(JS) -->
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
 
-    <!--
+    <!---->
     <script>
     	$(function() {
 			$('#accordion').accordion({
@@ -149,7 +148,7 @@
 				active: false
 			});
 		});
-    </script>-->
+    </script>
 
 </head>
 <body>
@@ -163,7 +162,7 @@
     <div class="register_title">
         레시피명  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input id="title" type="text" name = board_title placeholder="대표 제목을 입력하세요." required> &nbsp;
-        <button class="red" type="submit" id="cancle"> 취소 </button> <button class="green" type="submit" id="register"> 수정 </button>
+        <button class="red" type="submit" id="cancle"> 취소 </button> <button class="green" type="submit" id="modify"> 수정 </button>
     </div> 
     <br>
 
@@ -213,10 +212,10 @@
         // 에터 객체 생성
         const editor = new toastui.Editor({
             el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
-            height: '600px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+            height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
             initialEditType: 'markdown',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
-            initialValue: '레시피를 작성해주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
-            previewStyle: 'vertical',                // 마크다운 ß프리뷰 스타일 (tab || vertical)
+            initialValue: '내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+            previewStyle: 'vertical'   ,                // 마크다운 ß프리뷰 스타일 (tab || vertical)
 
              // 이미지가 Base64 형식으로 입력되는 것 가로채주는 옵션
              // 추후 jsp 파일로 바꾼 이후 서블릿의 메서드를 이용해 매핑하여 업로드 이미지를 처리할 컨트롤러 생성 필요
@@ -260,7 +259,7 @@
             }
         });
         //editor.getHtml()을 사용해서 에디터 내용 수신
-        // document.querySelector('#contents').insertAdjacentHTML('afterbegin' ,editor.getHTML());
+        document.querySelector('#contents').insertAdjacentHTML('afterbegin' ,editor.getHTML());
         // 콘솔창에 표시(브라우저에서 content 값 확인)
         // console.log(editor.getHTML());
     </script>
